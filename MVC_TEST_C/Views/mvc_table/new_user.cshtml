@@ -1,0 +1,26 @@
+﻿@model MVC_TEST_C.Models.View_model.mvc_table_add
+@{
+    ViewBag.Title = "Nuevo";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@using (Html.BeginForm("new_user", "mvc_table", FormMethod.Post))
+            {
+                <div class="row">
+                    <div class="col-md-12">
+                        @Html.LabelFor(d=>d.id)
+                        @Html.TextBoxFor(d=>d.id, "", new {@class="form-control"})
+                        @Html.LabelFor(d=>d.name_user)
+                        @Html.TextBoxFor(d=>d.name_user, "", new {@class="form-control"})
+                        @Html.LabelFor(d=>d.email)
+                        @Html.TextBoxFor(d => d.email, "", new {@class="form-control"})
+                        @Html.LabelFor(d=>d.birthday)
+                        <br />
+                        @Html.EditorFor(d=>d.birthday, "", new {@class="form-control"})
+
+                        <button class="btn btn-success">Guardar</button>
+                    </div>
+
+                </div>
+}

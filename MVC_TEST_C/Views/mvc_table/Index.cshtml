@@ -1,0 +1,32 @@
+﻿@model List<MVC_TEST_C.Models.View_model.table_view_model>
+@{
+    ViewBag.Title = "Datos";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div  class="row">
+    <a href="~/mvc_table/new_user" class="btn btn-success">Agregar</a>
+    <div class="col-md-12">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>nombre</th>
+                    <th>Correo</th>
+                    <th>cumple</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var element in Model) {
+                <tr>
+                    <td>@element.id</td>
+                    <td>@element.name_user</td>
+                    <td>@element.email</td>
+                    <td>@element.birthday</td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

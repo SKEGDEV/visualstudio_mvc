@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="mvc_testModelStoreContainer" CdmEntityContainer="mvc_testEntity">
+    <EntitySetMapping Name="mvc_table">
+      <EntityTypeMapping TypeName="mvc_testModel.mvc_table">
+        <MappingFragment StoreEntitySet="mvc_table">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name_user" ColumnName="name_user" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="birthday" ColumnName="birthday" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
