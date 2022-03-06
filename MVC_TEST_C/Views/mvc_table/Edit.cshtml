@@ -1,0 +1,25 @@
+﻿@model MVC_TEST_C.Models.View_model.mvc_table_add
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>@ViewBag.Title</h2>
+
+
+@using (Html.BeginForm("Edit","mvc_table", FormMethod.Post))
+            {
+                <div class="row">
+                    <div class="col-md-12">
+                        @Html.HiddenFor(d=>d.id)
+                        @Html.LabelFor(d=>d.name_user)
+                        @Html.TextBoxFor(d=>d.name_user, "", new {@class="form-control"})
+                        @Html.LabelFor(d=>d.email)
+                        @Html.TextBoxFor(d=>d.email, "", new {@class="form-control"})
+                        @Html.LabelFor(d=>d.birthday)
+                        <br />
+                        @Html.EditorFor(d=>d.birthday, "", new {@class="form-control"})
+                        <br />
+                        <button class="btn btn-success">Editar</button>
+                    </div>
+                </div>
+            }
